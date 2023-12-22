@@ -276,7 +276,7 @@ def merge_chunks(
     speaker_idxs = []
 
     assert chunk_size > 0
-    binarize = Binarize(max_duration=chunk_size, onset=onset, offset=offset)
+    binarize = Binarize(max_duration=3.0, onset=onset, offset=offset)
     segments = binarize(segments)
     segments_list = []
     for speech_turn in segments.get_timeline():
